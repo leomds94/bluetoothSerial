@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>
+      <ion-row>
+        <ion-col col-5>
+          <img src="assets/imgs/icon.png" />
+        </ion-col>
+        <ion-col col-4>
+          <p>Conectar</p>
+        </ion-col>
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list padding>
+    <button ion-button block (click)="startScanning()">Procurar</button>
+    <ion-list-header>
+      Dispositivos Pareados
+    </ion-list-header>
+    <ion-item *ngFor="let device of pairedDevices">
+      <span (click)="selectDevice(device.address)">
+        {{device.name}}
+      </span>
+    </ion-item>
+    <button ion-button block (click)="disconnect()">Desconectar</button>
+    <ion-list-header>
+      Dispositivos disponíveis
+    </ion-list-header>
+    <ion-item *ngFor='let device of unpairedDevices'>
+      <span (click)="selectDevice(device.address)">
+        {{device.name}}
+      </span>
+    </ion-item>
+    <ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner>
+  </ion-list>
+
+</ion-content>

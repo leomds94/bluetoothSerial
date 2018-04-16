@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>messagens Pré-definidas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <form>
+
+    <ion-row>
+      <ion-col col-3>
+        <button ion-button full item-left type="submit" (click)="send('m1')">m1</button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-item>
+          <ion-input [(ngModel)]="savedMessage.m1" name="m1"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+        <ion-col col-3>
+          <button ion-button full item-left type="submit" (click)="send('m2')">m2</button>
+        </ion-col>
+        <ion-col col-8>
+          <ion-item>
+            <ion-input [(ngModel)]="savedMessage.m2" name="m2"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+          <ion-col col-3>
+            <button ion-button full item-left type="submit" (click)="send('m3')">m3</button>
+          </ion-col>
+          <ion-col col-8>
+            <ion-item>
+              <ion-input [(ngModel)]="savedMessage.m3" name="m3"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-3>
+              <button ion-button full item-left type="submit" (click)="send('p')">p</button>
+            </ion-col>
+            <ion-col col-8>
+              <ion-item>
+                <ion-input [(ngModel)]="savedMessage.p" name="p"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+  </form>
+
+</ion-content>
